@@ -22,7 +22,7 @@ pipeline {
                     dir('kubernetes') {
                         sh "aws eks update-kubeconfig --name jenkins-server-eks-cluster --region us-east-1"
                         sh "kubectl apply -f deployment.yaml"
-                        sh "kubecrl apply -f service.yaml"
+                        sh "kubectl apply -f service.yaml"
                     }
                 }
             }
